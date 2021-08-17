@@ -1,1 +1,1 @@
-/workspace/mur_stereo_acq_left/devel/.private/mur_left_image_acq/lib/pkgconfig/mur_left_image_acq.pc
+/workspace/left_cam_acq/mur_stereo_acq_left/devel/.private/mur_left_image_acq/lib/pkgconfig/mur_left_image_acq.pc

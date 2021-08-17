@@ -1,4 +1,4 @@
-prefix=/workspace/mur_stereo_acq_left/install
+prefix=/workspace/left_cam_acq/mur_stereo_acq_left/install
 
 Name: mur_left_image_acq
 Description: Description of mur_left_image_acq

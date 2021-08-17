@@ -1,8 +1,8 @@
-# Install script for directory: /workspace/mur_stereo_acq_left/src/mur_stereo_basler
+# Install script for directory: /workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/workspace/mur_stereo_acq_left/install")
+  set(CMAKE_INSTALL_PREFIX "/workspace/left_cam_acq/mur_stereo_acq_left/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/workspace/mur_stereo_acq_left/build/mur_left_image_acq/gtest/cmake_install.cmake")
+  include("/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/gtest/cmake_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,113 +59,113 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/_setup_util.py")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE PROGRAM FILES "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE PROGRAM FILES "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/env.sh")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE PROGRAM FILES "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE PROGRAM FILES "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/setup.bash;/workspace/mur_stereo_acq_left/install/local_setup.bash")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/setup.bash;/workspace/left_cam_acq/mur_stereo_acq_left/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE FILE FILES
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.bash"
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE FILE FILES
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.bash"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/setup.sh;/workspace/mur_stereo_acq_left/install/local_setup.sh")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/setup.sh;/workspace/left_cam_acq/mur_stereo_acq_left/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE FILE FILES
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.sh"
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE FILE FILES
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.sh"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/setup.zsh;/workspace/mur_stereo_acq_left/install/local_setup.zsh")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/setup.zsh;/workspace/left_cam_acq/mur_stereo_acq_left/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE FILE FILES
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.zsh"
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE FILE FILES
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/setup.zsh"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/workspace/mur_stereo_acq_left/install/.rosinstall")
+   "/workspace/left_cam_acq/mur_stereo_acq_left/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/workspace/mur_stereo_acq_left/install" TYPE FILE FILES "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/workspace/left_cam_acq/mur_stereo_acq_left/install" TYPE FILE FILES "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/.rosinstall")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acq.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acq.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq/cmake" TYPE FILE FILES
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig.cmake"
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig-version.cmake"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig.cmake"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq" TYPE FILE FILES "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq" TYPE FILE FILES "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acq.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acq.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq/cmake" TYPE FILE FILES
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig.cmake"
-    "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig-version.cmake"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig.cmake"
+    "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/catkin_generated/installspace/mur_left_image_acqConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq" TYPE FILE FILES "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mur_left_image_acq" TYPE FILE FILES "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -176,5 +176,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

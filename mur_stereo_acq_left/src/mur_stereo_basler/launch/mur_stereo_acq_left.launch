@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <node pkg="mur_left_image_acq" type="mur_left_image_acq" name="mur_left_image_acq" output="screen"/>
+    <arg name="arg1"/>
+    <node pkg="mur_left_image_acq" type="mur_left_image_acq" name="mur_left_image_acq" args="$(arg arg1)" output="screen"/>
 </launch>
+

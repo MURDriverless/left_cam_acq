@@ -33,7 +33,7 @@ class PylonCam: public IGeniCam {
             Pylon::PylonTerminate();
         }
 
-        void setup(const std::string cameraName) {
+        void setup(const std::string cameraName, int lightSetting, int exposureTimeSetting, int frameRateSetting) {
             Pylon::CTlFactory& TlFactory = Pylon::CTlFactory::GetInstance();
             Pylon::CDeviceInfo di;
             di.SetFriendlyName(cameraName.c_str());
@@ -47,65 +47,112 @@ class PylonCam: public IGeniCam {
             // camera.MaxNumBuffer = 1;
 
             camera.Open();
+
             GenApi::INodeMap& nodemap = camera.GetNodeMap();
-            // Pylon::CEnumParameter(nodemap, "PixelFormat").SetValue("BayerBG8");
+
+            // captures only the bottom half of the images 
+            camera.OffsetY.SetValue(600);
+            camera.Width = 1920; 
+            camera.Height = 600; 
 
             // setting the pixelformat removed the 3x3 grid problem when recording images and it allows us to record in colored! 
             Pylon::CEnumParameter(nodemap, "PixelFormat").SetValue("RGB8");
             
-            Pylon::CBooleanParameter(nodemap, "AcquisitionFrameRateEnable").SetValue(false);
-            // camera.LightSourcePreset.SetValue(Basler_UniversalCameraParams::LightSourcePresetEnums::LightSourcePreset_Daylight6500K);
+            Pylon::CBooleanParameter(nodemap, "AcquisitionFrameRateEnable").SetValue(true);
 
-            // Disable light source presets (no correction)
-            // Pylon:: CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Off");
-            // Set the light source preset for daylight (at about 5000K)
-            // CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Daylight5000K");
+            if (frameRateSetting == 1) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(160.0);
+            }
+            else if (frameRateSetting == 2) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(5.0);
+            }
+            else if (frameRateSetting == 3) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(10.0);
+            }
+            else if (frameRateSetting == 4) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(15.0);
+            }
+            else if (frameRateSetting == 5) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(20.0);
+            }
+            else if (frameRateSetting == 6) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(25.0);
+            }
+            else if (frameRateSetting == 7) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(30.0);
+            }
+            else if (frameRateSetting == 8) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(35.0);
+            }
+            else if (frameRateSetting == 9) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(40.0);
+            }
+            else if (frameRateSetting == 10) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(45.0);
+            }
+            else if (frameRateSetting == 11) {
+                Pylon::CFloatParameter(nodemap, "AcquisitionFrameRate").SetValue(50.0);
+            }
 
-            Pylon:: CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Daylight6500K");
-
-            // Pylon:: CEnumParameter(nodemap, "ExposureMode").SetValue("Timed");
-
-            // Pylon:: CEnumParameter(nodemap, "ExposureAuto").SetValue("Continuous");
-
-            // Set the exposure time mode to Standard
-            // Note: Available on selected camera models only
-            // Pylon:: CEnumParameter(nodemap, "ExposureTimeMode").SetValue("Standard");
-            // Set the exposure time to 3500 microseconds
-            Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(defaultExposureTime);
-
+            if (lightSetting == 1) {
+                Pylon:: CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Off");
+                std::cout << "light preset: off" << std::endl;
+            }
+            else if (lightSetting == 2) {
+                Pylon:: CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Daylight5000K");
+                std::cout << "daylight 5000K" << std::endl;
+            }
+            else if (lightSetting == 3) {
+                Pylon:: CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Daylight6500K");
+                // camera.LightSourcePreset.SetValue(Basler_UniversalCameraParams::LightSourcePresetEnums::LightSourcePreset_Daylight6500K);
+                std::cout << "daylight 6500K" << std::endl;
+            }
+  
+            if (exposureTimeSetting == 1) {
+                // Set the exposure time to 3500 microseconds
+                Pylon:: CEnumParameter(nodemap, "ExposureMode").SetValue("Timed");
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(defaultExposureTime);
+                // Pylon:: CEnumParameter(nodemap, "ExposureAuto").SetValue("Continuous");
+            } 
+            else if (exposureTimeSetting == 2) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(4000);
+            }
+            else if (exposureTimeSetting == 3) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(3000);
+            }
+            else if (exposureTimeSetting == 4) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(2000);
+            }
+            else if (exposureTimeSetting == 5) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(1000);
+            }
+            else if (exposureTimeSetting == 6) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(500);
+            }
+            else if (exposureTimeSetting == 7) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(250);
+            }
+            else if (exposureTimeSetting == 8) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(125);
+            }
+            else if (exposureTimeSetting == 9) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(100);
+            }
+            else if (exposureTimeSetting == 10) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(75);
+            }
+            else if (exposureTimeSetting == 11) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(50);
+            }
+            else if (exposureTimeSetting == 12) {
+                Pylon:: CFloatParameter(nodemap, "ExposureTime").SetValue(25);
+            }
             
-            // CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Fluorescent4000K");
-            
-            // Set the light source preset for tungsten lighting
-            // CEnumParameter(nodemap, "BslLightSourcePreset").SetValue("Tungsten2800K");
 
-            camera.Width = 1920;
-            camera.Height = 1200;
-            
-            /**
-            // Hardware triggering code 
-            // Select GPIO line 1
-            camera.LineSelector.SetValue(LineSelector_Line1);
-            // Set the line mode to Input
-            camera.LineMode.SetValue(LineMode_Input);
-            
-            // Select GPIO line 3
-            camera.LineSelector.SetValue(LineSelector_Line3);
-            // Set the line mode to Input
-            camera.LineMode.SetValue(LineMode_Output);
-
-
-
-            // Select and enable the Frame Start trigger
-            camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
-            camera.TriggerMode.SetValue(TriggerMode_On);
-            camera.TriggerActivation.SetValue(TriggerActivation_RisingEdge);
-            // // Select and enable the Acquisition Start trigger
-            // camera.TriggerSelector.SetValue(TriggerSelector_AcquisitionStart);
-            // camera.TriggerMode.SetValue(TriggerMode_On);
-            
-            camera.TriggerSource.SetValue(TriggerSource_Line1);
-            **/
+            // Set the measuring location to core board
+            // can't measure any other points on the camera. 
+            Pylon::CEnumParameter(nodemap, "DeviceTemperatureSelector").SetValue("Coreboard");
+         
 
             /** 
             // software triggering code 
@@ -116,26 +163,8 @@ class PylonCam: public IGeniCam {
             // // Set the trigger source for the Frame Start trigger to Software
             // camera.TriggerSource.SetValue(Basler_UniversalCameraParams::TriggerSource_Software);
             **/
-
-            // // Select auto function ROI 2
-            // Pylon::CEnumParameter(nodemap, "AutoFunctionROISelector").SetValue("ROI2");
-            // // Enable the Balance White Auto auto function
-            // // for the auto function ROI selected
-            // Pylon::CBooleanParameter(nodemap, "AutoFunctionROIUseWhiteBalance").SetValue(true);
-            // // Enable Balance White Auto by setting the operating mode to Continuous
-
-            // using this one gave an error...
-            /*
-            The program 'Left camera' received an X Window System error.
-            This probably reflects a bug in the program.
-            The error was 'BadShmSeg (invalid shared segment parameter)'.
-            (Details: serial 213 error_code 128 request_code 130 minor_code 3)
-            (Note to programmers: normally, X errors are reported asynchronously;
-            that is, you will receive the error a while after causing it.
-            To debug your program, run it with the --sync command line
-            option to change this behavior. You can then get a meaningful
-            backtrace from your debugger if you break on the gdk_x_error() function.)
-            */
+     
+            // Enable Balance White Auto by setting the operating mode to Continuous
             // Pylon::CEnumParameter(nodemap, "BalanceWhiteAuto").SetValue("Continuous");
             camera.Close();
         }
@@ -164,15 +193,11 @@ class PylonCam: public IGeniCam {
         }
 
         void softwareTrigger() {
-            // Generate a software trigger signal
-            // camera.Open();
-            // camera.TriggerSoftware.Execute();
-            // camera.Close();
             camera.ExecuteSoftwareTrigger();
-            // GenApi::INodeMap& nodemap = camera.GetNodeMap();
-            // Pylon::CEnumParameter(nodemap, "PixelFormat").SetValue("RGB8");
-            // GenApi genapi_camera; 
-            // genapi_camera.Execute();
+        }
+
+        double getTemperatureReading() {
+            return camera.DeviceTemperature.GetValue();
         }
 
         bool retreiveResult(int &height, int &width, uint8_t* &buffer) {

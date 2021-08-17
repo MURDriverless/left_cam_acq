@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /workspace/mur_stereo_acq_left/devel/.private/mur_left_image_acq/setup.sh
+    local-name: /workspace/left_cam_acq/mur_stereo_acq_left/devel/.private/mur_left_image_acq/setup.sh

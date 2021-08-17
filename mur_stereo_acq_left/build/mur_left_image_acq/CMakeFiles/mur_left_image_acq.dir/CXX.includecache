@@ -1496,9 +1496,9 @@ GenApi/GenApiNamespace.h
 pylon/TypeMappings.h
 -
 
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniPylon.hpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniPylon.hpp
 GeniWrap.hpp
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp
 pylon/PylonIncludes.h
 -
 pylon/BaslerUniversalInstantCamera.h
@@ -1510,13 +1510,13 @@ pylon/EnumParameterT.h
 GenApi/GenApi.h
 -
 
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp
 iostream
 -
 
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.cpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.cpp
 GeniWrap.hpp
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.hpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.hpp
 GeniPylon.hpp
-/workspace/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniPylon.hpp
+/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniPylon.hpp
 

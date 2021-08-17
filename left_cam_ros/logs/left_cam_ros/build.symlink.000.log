@@ -1,0 +1,4 @@
+Symlinking /workspace/left_cam_acq/left_cam_ros/devel/share/left_cam_ros/cmake/left_cam_rosConfig.cmake
+Symlinking /workspace/left_cam_acq/left_cam_ros/devel/share/left_cam_ros/cmake/left_cam_rosConfig-version.cmake
+Symlinking /workspace/left_cam_acq/left_cam_ros/devel/lib/left_cam_ros/left_cam_ros
+Symlinking /workspace/left_cam_acq/left_cam_ros/devel/lib/pkgconfig/left_cam_ros.pc

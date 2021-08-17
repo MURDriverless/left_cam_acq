@@ -1,0 +1,6 @@
+devel_space: /workspace/left_cam_acq/left_cam_ros/devel
+install: false
+install_space: /workspace/left_cam_acq/left_cam_ros/install
+profile: default
+source_space: /workspace/left_cam_acq/left_cam_ros/src
+workspace: /workspace/left_cam_acq/left_cam_ros

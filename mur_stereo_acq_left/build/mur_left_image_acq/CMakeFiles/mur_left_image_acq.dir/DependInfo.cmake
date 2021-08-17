@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.cpp" "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/mur_left_image_acq.dir/src/GeniWrap.cpp.o"
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/src/main.cpp" "/workspace/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/mur_left_image_acq.dir/src/main.cpp.o"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.cpp" "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/mur_left_image_acq.dir/src/GeniWrap.cpp.o"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/main.cpp" "/workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/mur_left_image_acq.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,10 +23,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/opencv"
   "/opt/pylon/include"
   "/usr/local/cuda/include"
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes"
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/Classical"
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/Detectors"
-  "/workspace/mur_stereo_acq_left/src/mur_stereo_basler/includes/StereoCommon"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/Classical"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/Detectors"
+  "/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/StereoCommon"
   "/usr/local/include/opencv4"
   )
 

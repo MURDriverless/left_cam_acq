@@ -1,0 +1,6 @@
+mur_stereo_basler
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/cmake.lock /workspace/left_cam_acq/left_cam_ros/devel/./cmake.lock
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/share/left_cam_ros/cmake/left_cam_rosConfig.cmake /workspace/left_cam_acq/left_cam_ros/devel/share/left_cam_ros/cmake/left_cam_rosConfig.cmake
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/share/left_cam_ros/cmake/left_cam_rosConfig-version.cmake /workspace/left_cam_acq/left_cam_ros/devel/share/left_cam_ros/cmake/left_cam_rosConfig-version.cmake
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/lib/left_cam_ros/left_cam_ros /workspace/left_cam_acq/left_cam_ros/devel/lib/left_cam_ros/left_cam_ros
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/lib/pkgconfig/left_cam_ros.pc /workspace/left_cam_acq/left_cam_ros/devel/lib/pkgconfig/left_cam_ros.pc

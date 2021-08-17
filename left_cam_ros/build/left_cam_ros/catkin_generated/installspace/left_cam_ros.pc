@@ -1,0 +1,8 @@
+prefix=/workspace/left_cam_acq/left_cam_ros/install
+
+Name: left_cam_ros
+Description: Description of left_cam_ros
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,4 +1,4 @@
-prefix=/workspace/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild
+prefix=/workspace/left_cam_acq/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

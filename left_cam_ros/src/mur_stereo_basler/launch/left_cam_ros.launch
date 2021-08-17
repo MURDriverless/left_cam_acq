@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="arg1"/>
+    <node pkg="left_cam_ros" type="left_cam_ros" name="left_cam_ros" args="$(arg arg1)" output="screen"/>
+</launch>
+

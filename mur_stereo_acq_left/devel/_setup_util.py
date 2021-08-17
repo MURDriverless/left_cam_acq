@@ -1,1 +1,1 @@
-/workspace/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/_setup_util.py
+/workspace/left_cam_acq/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/_setup_util.py

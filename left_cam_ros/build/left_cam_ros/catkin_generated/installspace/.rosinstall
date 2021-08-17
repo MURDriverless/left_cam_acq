@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /workspace/left_cam_acq/left_cam_ros/install/setup.sh

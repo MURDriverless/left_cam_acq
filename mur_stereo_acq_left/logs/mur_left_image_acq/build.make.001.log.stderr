@@ -1,0 +1,19 @@
+In file included from [01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/GeniWrap.cpp:1:0[m[K:
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp:23:24:[m[K [01;31m[Kerror: [m[K'[01m[Kvirtual double IGeniCam::getTemperatureReading()[m[K' cannot be overloaded
+         virtual double [01;31m[KgetTemperatureReading[m[K() = 0;
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp:21:24:[m[K [01;31m[Kerror: [m[Kwith '[01m[Kvirtual double IGeniCam::getTemperatureReading()[m[K'
+         virtual double [01;31m[KgetTemperatureReading[m[K() = 0;
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/mur_left_image_acq.dir/src/GeniWrap.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/main.cpp:48:0[m[K:
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp:23:24:[m[K [01;31m[Kerror: [m[K'[01m[Kvirtual double IGeniCam::getTemperatureReading()[m[K' cannot be overloaded
+         virtual double [01;31m[KgetTemperatureReading[m[K() = 0;
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/includes/GeniWrap.hpp:21:24:[m[K [01;31m[Kerror: [m[Kwith '[01m[Kvirtual double IGeniCam::getTemperatureReading()[m[K'
+         virtual double [01;31m[KgetTemperatureReading[m[K() = 0;
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/mur_left_image_acq.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/mur_left_image_acq.dir/all] Error 2
+make: *** [all] Error 2
