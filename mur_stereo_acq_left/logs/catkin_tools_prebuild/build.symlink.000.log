@@ -1,0 +1,46 @@
+Symlinking /workspace/mur_stereo_acq_left/devel/./setup.zsh
+Symlinking /workspace/mur_stereo_acq_left/devel/./_setup_util.py
+Symlinking /workspace/mur_stereo_acq_left/devel/./setup.bash
+Symlinking /workspace/mur_stereo_acq_left/devel/./local_setup.bash
+Symlinking /workspace/mur_stereo_acq_left/devel/./local_setup.zsh
+Symlinking /workspace/mur_stereo_acq_left/devel/./local_setup.sh
+Symlinking /workspace/mur_stereo_acq_left/devel/./setup.sh
+Symlinking /workspace/mur_stereo_acq_left/devel/./cmake.lock
+Symlinking /workspace/mur_stereo_acq_left/devel/./env.sh
+Symlinking /workspace/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /workspace/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /workspace/mur_stereo_acq_left/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/setup.zsh, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.zsh)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/_setup_util.py, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./_setup_util.py)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/setup.bash, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.bash)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/local_setup.bash, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.bash)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/local_setup.zsh, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.zsh)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/local_setup.sh, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.sh)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/setup.sh, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.sh)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/cmake.lock, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./cmake.lock)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/env.sh, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./env.sh)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake)
+Cleaning: (/workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/lib/pkgconfig/catkin_tools_prebuild.pc, /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/lib/pkgconfig/catkin_tools_prebuild.pc)
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.zsh
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./_setup_util.py
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.bash
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.bash
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.zsh
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./local_setup.sh
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./setup.sh
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/./env.sh
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Already unlinked: {}
+Unlinking: /workspace/stereo_synthPOC/src/stereo_synthPOC/mur_stereo_acq_left/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Already unlinked: {}

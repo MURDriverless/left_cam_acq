@@ -1,0 +1,1 @@
+/workspace/mur_stereo_acq_left/devel/.private/mur_left_image_acq/share/mur_left_image_acq/cmake/mur_left_image_acqConfig-version.cmake

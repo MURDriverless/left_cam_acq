@@ -1,0 +1,1 @@
+/workspace/mur_stereo_acq_left/devel/.private/catkin_tools_prebuild/setup.sh
