@@ -1,0 +1,7 @@
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/main.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler/src/main.cpp:160:9:[m[K [01;31m[Kerror: [m[Kdeclaration of '[01m[Kauto camera1_done[m[K' has no initializer
+         [01;31m[Kauto[m[K camera1_done;
+         [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/mur_left_image_acq.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/mur_left_image_acq.dir/all] Error 2
+make: *** [all] Error 2

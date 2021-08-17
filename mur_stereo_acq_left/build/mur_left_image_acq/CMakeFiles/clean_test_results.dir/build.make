@@ -62,10 +62,10 @@ RM = /opt/cmake-3.18.2-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/mur_stereo_acq_left/src/mur_stereo_basler
+CMAKE_SOURCE_DIR = /workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/mur_stereo_acq_left/build/mur_left_image_acq
+CMAKE_BINARY_DIR = /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq
 
 # Utility rule file for clean_test_results.
 
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /workspace/mur_stereo_acq_left/build/mur_left_image_acq
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /workspace/mur_stereo_acq_left/build/mur_left_image_acq/test_results
+	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -90,6 +90,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /workspace/mur_stereo_acq_left/build/mur_left_image_acq && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/mur_stereo_acq_left/src/mur_stereo_basler /workspace/mur_stereo_acq_left/src/mur_stereo_basler /workspace/mur_stereo_acq_left/build/mur_left_image_acq /workspace/mur_stereo_acq_left/build/mur_left_image_acq /workspace/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler /workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

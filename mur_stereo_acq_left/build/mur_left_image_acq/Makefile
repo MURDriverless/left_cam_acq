@@ -67,10 +67,10 @@ RM = /opt/cmake-3.18.2-Linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspace/mur_stereo_acq_left/src/mur_stereo_basler
+CMAKE_SOURCE_DIR = /workspace/left_cam_acq/mur_stereo_acq_left/src/mur_stereo_basler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspace/mur_stereo_acq_left/build/mur_left_image_acq
+CMAKE_BINARY_DIR = /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -156,9 +156,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles /workspace/mur_stereo_acq_left/build/mur_left_image_acq//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/left_cam_acq/mur_stereo_acq_left/build/mur_left_image_acq/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

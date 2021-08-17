@@ -1,34 +1,50 @@
+/*
+Acquires images from the left camera and publishes them on a ROS Topic named /imagePublisher/left_image
+
+lightSetting 
+1 - off
+2 - daylight 5000K
+3 - daylight 6500K
+4 - Fluorescent 4000K
+5 - Tungsten 2800K
+
+exposureTimeSetting 
+1 - defaultExposureTime == 5000us
+                
+
+By: Kelvin Liao, Spatial and Perception Engineer at MUR 2020
+Date: 17/08/2021 
+
+Adapted from: Andrew Huang, Spatial and Perception Engineer at MUR 2020
+
+*/
 #include <ros/duration.h>
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
-
 #include <sensor_msgs/image_encodings.h>
-
 #include <opencv2/highgui.hpp>
 #include <opencv2/calib3d.hpp>
-
 #include <opencv2/core/cuda.hpp>
 #include <opencv2/cudawarping.hpp>
 #include <opencv2/cudaarithm.hpp>
 #include <opencv2/cudaimgproc.hpp>
-
 #include <opencv2/xfeatures2d.hpp>
 #include <opencv2/xfeatures2d/nonfree.hpp>
+#include <pylon/PylonIncludes.h>
+#include <pylon/BaslerUniversalInstantCamera.h>
+#include <pylon/ParameterIncludes.h>
+#include <pylon/EnumParameterT.h>
 #include <iostream>
-
 #include <ros/ros.h> // Must include for all ROS C++
 #include "sensor_msgs/Image.h" 
 #include <sstream>
 #include <opencv2/core.hpp>
-
 #include <opencv2/imgproc.hpp>
-
 #include "Detectors.hpp"
 #include "ClassicalStereo.hpp"
 #include "PreviewArgs.hpp"
-
 #include "GeniWrap.hpp"
 
 #define PREVIEW
@@ -51,19 +67,17 @@ class ImageConverter {
 
 public:
   ImageConverter():it_(nh_) {
-    // Subscrive to input video feed and publish output video feed
     image_sub_ = it_.subscribe("/imagePublisher/left_image", 1,
     &ImageConverter::imageCb, this);
     image_pub_ = it_.advertise("/imagePublisher/left_image", 1);
 
-    // cv::namedWindow(OPENCV_WINDOW);
   }
 
   ~ImageConverter() {
-    // cv::destroyWindow(OPENCV_WINDOW);
+
   }
 
-    // this imageCB function is used to convert ROS messages to OpenCV messages 
+  // this imageCB function is used to convert ROS messages to OpenCV messages 
   void imageCb(const sensor_msgs::ImageConstPtr& msg) {
     cv_bridge::CvImagePtr cv_ptr;
     
@@ -110,15 +124,33 @@ int main(int argc, char** argv) {
 
     int imageCount = 0;
 
+    int lightSetting = 1;
+    int exposureTimeSetting = 1;
+    int frameRateSetting = 1;
+
+    if (argc > 1) {  
+      lightSetting = std::stoi(argv[1]);
+      exposureTimeSetting = std::stoi(argv[2]);
+      frameRateSetting = std::stoi(argv[3]);
+      std::cout << "reading successful" << std::endl;
+    }
+
     try {
         // std::cout << "try block" << std::endl;
 
-        camera1->setup(CAMARA_NAME_L);
+        camera1->setup(CAMARA_NAME_L, lightSetting, exposureTimeSetting, frameRateSetting);
+
         camera1->startGrabbing(grabCount);
         
         ros::Time start_time = ros::Time::now();
+        auto first_camera1 = std::chrono::high_resolution_clock::now();
+        auto camera1_prev = first_camera1;
+        double frameTime1;
+        double frameTime2;
+        auto camera1_done = first_camera1;
 
         while (imageCount < grabCount && camera1->isGrabbing() && ros::ok()) {
+          
           // Wait for an image and then retrieve it. A timeout of 5000 ms is used.
           int height1;
           int width1;
@@ -135,11 +167,20 @@ int main(int argc, char** argv) {
 
           bool ret1 = camera1->retreiveResult(height1, width1, buffer1);
           ros::Time camera1_time = ros::Time::now();
-          // auto first_camera1 = std::chrono::high_resolution_clock::now();
+          
 
           sensor_msgs::Image left_img_msg;
 
-          std::cout << "Camera Left Frame Rate is: " << camera1->getFrameRate() << ", Exposure Time is: " << camera1->getExposureTime() << std::endl;
+          camera1_done = std::chrono::high_resolution_clock::now();
+          
+          frameTime1 = std::chrono::duration_cast<std::chrono::milliseconds>(camera1_done - first_camera1).count();
+          frameTime2 = std::chrono::duration_cast<std::chrono::milliseconds>(camera1_done - camera1_prev).count();
+
+          std::cout << "Camera Left Frame Rate is: " << camera1->getFrameRate();
+          std::cout << ", Exposure Time is: " << camera1->getExposureTime();
+          std::cout << ", Temperature reading is: " << camera1->getTemperatureReading(); 
+          std::cout << ", AbsTime is: " << frameTime1 << " ms";
+          std::cout << ", RelativeTime is: " << frameTime2 << std::endl;
           
           if (ret1) {
             cv_bridge::CvImage myCvImage; 
@@ -167,22 +208,17 @@ int main(int argc, char** argv) {
             // cv::imwrite(image_name, dst);
 
           }
-          // auto camera1_done = std::chrono::high_resolution_clock::now();
-          // double frameTime1 = std::chrono::duration_cast<std::chrono::milliseconds>(camera1_done - first_camera1).count();
-
-          // std::cout << "camera 1 time is: " << frameTime1 << std::endl;
-
-          // first_camera1 = camera1_done; 
-
-          // std::cout << "imagecount: " << imageCount << std::endl;
-
+       
+          camera1_prev = camera1_done;
           imageCount = imageCount + 1;
-
           left_imagePublisher.publish(left_img_msg);
-
           ros::spinOnce();
 
-          // camera1->softwareTrigger();
+          if (camera1->getTemperatureReading() > 75) {
+            std::cout << "CRITICAL temperature state, closing camera" << std::endl;
+            break; 
+         }
+
       }
     }
     catch (const std::exception &e)
@@ -195,8 +231,6 @@ int main(int argc, char** argv) {
 
     std::cout << "ending program" << std::endl;
     camera1->finalizeLibrary();
-
     delete camera1.release();
-
     return exitCode;
 }

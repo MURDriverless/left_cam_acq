@@ -1,0 +1,1 @@
+/workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/share/left_cam_ros/cmake/left_cam_rosConfig-version.cmake

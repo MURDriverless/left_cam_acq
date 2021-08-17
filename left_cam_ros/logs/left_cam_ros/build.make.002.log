@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target left_cam_ros[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/left_cam_ros.dir/src/main.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /workspace/left_cam_acq/left_cam_ros/devel/.private/left_cam_ros/lib/left_cam_ros/left_cam_ros[0m
+/usr/bin/ld: warning: libopencv_imgproc.so.4.1, needed by /usr/local/lib/libopencv_highgui.so.4.1.1, may conflict with libopencv_imgproc.so.3.2
+[100%] Built target left_cam_ros
