@@ -53,7 +53,8 @@ class PylonCam: public IGeniCam {
             // captures only the bottom half of the images 
             camera.OffsetY.SetValue(600);
             camera.Width = 1920; 
-            camera.Height = 600; 
+            // camera.Height = 600; 
+            camera.Height = 1200;
 
             // setting the pixelformat removed the 3x3 grid problem when recording images and it allows us to record in colored! 
             Pylon::CEnumParameter(nodemap, "PixelFormat").SetValue("RGB8");

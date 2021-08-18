@@ -156,7 +156,7 @@ int main(int argc, char** argv) {
           int width1;
           uint8_t* buffer1;
 
-          // std::cout << "while loop" << std::endl;
+          std::cout << "while loop" << std::endl;
 
           // if (camera1->isReady()) {
           //   std::cout << "camera1 is ready" << std::endl;

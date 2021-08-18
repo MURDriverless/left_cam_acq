@@ -2626,6 +2626,20 @@ numeric
 fstream
 -
 
+/workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/includes/GeniPylon.hpp
+GeniWrap.hpp
+/workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/includes/GeniWrap.hpp
+pylon/PylonIncludes.h
+-
+pylon/BaslerUniversalInstantCamera.h
+-
+pylon/ParameterIncludes.h
+-
+pylon/EnumParameterT.h
+-
+GenApi/GenApi.h
+-
+
 /workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/includes/GeniWrap.hpp
 iostream
 -
@@ -3973,6 +3987,12 @@ opencv2/viz/viz3d.hpp
 /workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/includes/opencv2/viz/widgets.hpp
 opencv2/viz/types.hpp
 -
+
+/workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/src/GeniWrap.cpp
+GeniWrap.hpp
+/workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/src/GeniWrap.hpp
+GeniPylon.hpp
+/workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/src/GeniPylon.hpp
 
 /workspace/left_cam_acq/left_cam_ros/src/mur_stereo_basler/src/main.cpp
 ros/duration.h
