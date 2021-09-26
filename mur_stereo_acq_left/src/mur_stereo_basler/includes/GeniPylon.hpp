@@ -51,7 +51,7 @@ class PylonCam: public IGeniCam {
             GenApi::INodeMap& nodemap = camera.GetNodeMap();
 
             // captures only the bottom half of the images 
-            camera.OffsetY.SetValue(600);
+            // camera.OffsetY.SetValue(600);
             camera.Width = 1920; 
             // camera.Height = 600; 
             camera.Height = 1200;
